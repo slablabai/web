@@ -1,0 +1,105 @@
+body {
+    color: #fff;
+    font-family: 'Monomaniac One';
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.background-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,20,120,255) 100%);
+    z-index: 3;
+}
+
+.background-image {
+    position: absolute;
+    top: var(--y-offset);
+    left: var(--x-offset);
+    width: 125%;
+    height: 125%;
+    background: url('images/galaxy.png') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.20;
+    z-index: 1;
+    transform: rotate(var(--rotate-angle)) var(--flip) var(--flop);
+}
+
+#starfield {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+#foreground {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 1;
+    z-index: 4;
+}
+
+.container {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 3;
+}
+
+.title {
+    font-size: 8em;
+    margin-bottom: -20px;
+    text-align: right;
+}
+
+.description {
+    font-size: 1.5em;
+    margin-top: -20px; 
+    margin-bottom: 0px; 
+    text-align: right;
+    padding-right: 0%;
+}
+
+.stealth {
+    font-size: 1.25em;
+    color: grey;
+    text-align: right;
+    padding-right: 0%;
+    margin-top: 0px;
+    transition: color 0.5s ease;
+}
+
+.stealth:hover {
+    color: #add8e6;
+}
+
+#foreground {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: right;
+    color: #decdec;
+    font-size: 1em;
+    z-index: 6;
+    padding-right: 10px;
+}
